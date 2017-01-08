@@ -21,7 +21,8 @@ app.get('/', function (req, res) {
   res.json({
     Message: "Welcome to freecode-camp 'Image Search Abstraction Layer' project",
     Search_Example: "https://freecode-image-sv.herokuapp.com/api/imagesearch/obi%20one%20kenobi/1",
-    RecentSearches_Example: "https://freecode-image-sv.herokuapp.com/api/imagesearch/latest/10"
+    RecentSearches_Example: "https://freecode-image-sv.herokuapp.com/api/imagesearch/latest/10",
+    Info: "This API is limited by google free custom search to only 30 searches in 24hrs."
   });
 });
 

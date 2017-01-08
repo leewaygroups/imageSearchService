@@ -18,7 +18,11 @@ var port = process.env.PORT || 4000;
 app.use('/api', require('./app'));
 
 app.get('/', function (req, res) {
-  res.json({Message: "Welcome to freecode-camp 'Image Search Abstraction Layer' project"});
+  res.json({
+    Message: "Welcome to freecode-camp 'Image Search Abstraction Layer' project",
+    Search_Example: "https://freecode-image-sv.herokuapp.com/api/imagesearch/obi%20one%20kenobi/1",
+    RecentSearches_Example: "https://freecode-image-sv.herokuapp.com/api/imagesearch/latest/10"
+  });
 });
 
 app.listen((process.env.PORT || 4000), function () {

@@ -1,0 +1,24 @@
+{
+  "name": "image-search-sv",
+  "version": "1.0.0",
+  "description": "Freecodecamp abstract image layer project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "freecodecamp",
+    "imagesearch",
+    "nodejs",
+    "javascript",
+    "express"
+  ],
+  "author": "Prince O. Onyenike",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "got": "^6.7.1",
+    "mongoose": "^4.7.6"
+  }
+}

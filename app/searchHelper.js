@@ -16,8 +16,15 @@ function search(req, res) {
 }
 
 function latestSearches(req, res) {
-  db.getRecentLogs(req.params.offset).then(function(err, logItems) {
-    err ? res.json({err: 'Failed to get recent searches'}) : res.json(logItems);
+  db.getRecentLogs(req.params.offset).then(function(logItems) {
+    logItems instanceof Array && logItems.length
+      ?   res.json(logItems.map(function(item){
+            return {
+              searchTerm: item.searchTerm,
+              dateTimeSubmitted: item.dateTimeSubmitted
+            }
+          }))
+      : res.json({message: 'Either no recent search exists or search exited with an error'});
   });
 }
 
